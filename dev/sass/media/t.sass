@@ -1,10 +1,15 @@
 $unit: 'px'
 section
   +w($tablet#{$unit})
+  margin: 0 auto
   padding: 0
 
+.row
+  justify-content: space-between
 
 .head
+  &,&-logo,&-nav:after,&-nav-item
+    transition: .35s ease
   &-mobile-none
     display: flex!important
   &-nav-mobile,&-burger
@@ -15,7 +20,7 @@ section
     img
       +w(100%)
   &-search
-    +w(215px)
+    flex: 0 0 140px
     &-input
       text-align: left
       padding: 5px 0 5px 30px
@@ -25,19 +30,20 @@ section
       border: none
       padding: 8px
   &-right
-    display: flex
+    flex: 0 0 140px
+    justify-content: space-between
     align-items: center
   &-cart
     display: block
-  &-login
-    margin: 0 40px
   &-nav
-    +wh(80%,auto)
+    height: auto
     display: flex
     align-items: center
     justify-content: space-between
     margin: 0 auto
     position: relative
+    &-cont
+      flex: 0 0 458px
     &:after
       +wh(100%,2px)
       display: block
@@ -48,15 +54,94 @@ section
       right: 0
       background-image: linear-gradient(90deg,rgba(#d2cdcc,.5),#6f5e59,rgba(#d2cdcc,.5))
     &-item
+      height: auto
+      padding: 10px 0
       border-bottom: none
+      font-size: 12px
       a
         +w(auto)
         padding: 0 10px
-
+  &-scrolled
+    .head
+      &-logo
+        +w(100px)
+      &-nav
+        &:after
+          height: 0
+        &-item
+          padding-bottom: 0
 
 main
-  margin-top: 131px
+  margin-top: 134px
 
+.block
+  display: flex
+  align-items: stretch
+  &-to
+    &-right
+      padding: 0 0 0 30px
+    &-left
+      padding: 0 30px 0 0
+    &-right,&-left
+      margin-bottom: 40px
+  &-text
+    padding: 0
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    flex-direction: column
+    margin-right: auto
+    &-bottom
+      position: absolute
+      bottom: 0
+  &-product
+    +w(15%)
+    margin: 0
+  &-photo
+    +w(35%)
+    display: block
+  &-pizza
+    &-photo
+      +w(60%)
+    &-product
+      +w(25%)
+      margin: 0 55px 0 auto
+    &-text-bottom
+      +w(100%)
+  &-mom
+    &-product
+      +w(20%)
+      margin: 0 auto 0 55px
+    &-photo
+      +w(60%)
+    &-text
+      &-bottom
+        +w(31%)
+  &-serenity
+    &-product
+      +w(20%)
+      margin: 0 55px 0 auto
+    &-photo
+      +w(45%)
+    &-text-bottom
+      +w(75%)
+
+.sign
+  margin-bottom: 40px
+  form
+    flex-wrap: nowrap
+  &-title
+    font-size: 28px
+    margin-bottom: 0
+    margin-top: 5px
+  &-input
+    +w(30%)
+    font-size: 18px
+  &-submit
+    font-size: 28px
+  &-input,&-submit
+    height: 50px
+    padding: 0 20px
 
 .footer
   &-list

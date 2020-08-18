@@ -1,7 +1,6 @@
 $unit: 'px'
 section
-  +w($mobile#{$unit})
-  margin: 0 auto
+  +w(100%)
   padding: 0 10px
 
 h1,h2,h3,h4,h5,h6
@@ -12,16 +11,21 @@ h1,h2,h3,h4,h5,h6
   align-items: center
 
 .head
-  padding: 10px 0
+  padding: 15px 0
   background-color: $black
   position: fixed
   top: 0
   left: 0
   right: 0
+  z-index: 100
   &,a,input
     color: $white
-  &-mobile-none
-    display: none!important
+  &-mobile
+    &-row
+      display: flex
+      align-items: center
+    &-none
+      display: none!important
   &-logo
     +w(100px)
     +dfc
@@ -41,6 +45,8 @@ h1,h2,h3,h4,h5,h6
     +wh(100%,0)
     transition: .35s ease
     overflow: hidden
+    &-cont
+      +w(100%)
     &-show
       .head-nav
         height: 390px
@@ -78,7 +84,7 @@ h1,h2,h3,h4,h5,h6
       &::placeholder
         color: rgba($white,.8)
     &-button
-      +wh(30px)
+      +wh(28px)
       padding: 5px
       position: absolute
       right: 0
@@ -91,32 +97,83 @@ h1,h2,h3,h4,h5,h6
       position: absolute
       right: 6px
 
-
 main
-  margin-top: 67px
+  margin-top: 77px
 
 .block
+  position: relative
+  &-to
+    &-right,&-left
+      padding: 0 10px
+      margin-bottom: 20px
+    &-right
+      background-image: linear-gradient(90deg, #faf4f0,#e4c3ac)
+    &-left
+      background-image: linear-gradient(270deg, #faf4f0,#e4c3ac)
   &-title
     font-size: 24px
     color: $brown
     padding-bottom: 20px
   &-text
+    padding-top: 30px
+    &-bottom
+      padding: 10px
+    &-title
+      font-size: 18px
+      margin-bottom: 7px
+      letter-spacing: 1px
+    &-title,&-link
+      text-align: right
+      color: $brown
+    &-link
+      display: block
     &-big
       font-size: 18px
+      font-family: $q_reg
       display: flex
       align-items: center
       padding-bottom: 10px
       img
-        height: 14px
+        height: 13px
         display: block
-        margin: 0 7px 3px
+        margin: 0 7px
   &-list
     &-item
       padding: 5px 0
       img
         +w(10px)
         margin-right: 10px
+  &-product,&-photo
+    font-size: 0
+  &-product
+    +w(50%)
+    margin: 0 auto
+  &-photo
+    display: none
 
+
+.sign
+  background-image: linear-gradient(90deg,#14151a,#222632,#14151a)
+  padding: 30px 10px
+  margin-bottom: 20px
+  form
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    justify-content: space-between
+  &-title
+    font-size: 21px
+    font-weight: 700
+    margin-bottom: 10px
+  &-title,&-submit,&-input,&-input::placeholder
+    color: $white
+  &-submit,&-input
+    height: 30px
+    border: 1px solid $white
+    padding: 0 10px
+  &-input
+    +w(calc(100% - 60px))
+    font-size: 12px
 
 .footer
   background-color: $black

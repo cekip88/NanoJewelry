@@ -4,7 +4,7 @@ append vars
     page_title= 'Main'
 block content
     main
-        section
+        .block-to-right
             .block
                 .block-right.block-text
                     h2.block-title
@@ -22,7 +22,40 @@ block content
                         li.block-list-item
                             +img('ball.png')
                             | Free express delivery worldwide
-                .block-middle.block-thing
+                .block-middle.block-product.block-banner-product
                     +img('amulet.png')
-                .block-left.block-photo
+                .block-left.block-photo.block-banner-photo
                     +img('girl.png')
+        .block-to-left.block-pizza
+            .block
+                .block-photo.block-pizza-photo
+                    +img('photo-pizza.png')
+                .block-product.block-pizza-product
+                    +img('amulet-pizza.png')
+                .block-text-bottom.block-pizza-text-bottom
+                    p.block-text-title "I Love You" in 120 Languages
+                    a(href='#').block-text-link Explore Love collection >
+        .block-to-right.block-mom
+            .block
+                .block-product.block-mom-product
+                    +img('amulet-mom.png')
+                .block-photo.block-mom-photo
+                    +img('photo-mom.png')
+                .block-text-bottom.block-mom-text-bottom
+                    p.block-text-title Mom you are the one
+                    a(href='#').block-text-link Gift for mom >
+        .block-to-left.block-serenity
+            .block
+                .block-photo.block-serenity-photo
+                    +img('photo-serenity.png')
+                .block-product.block-serenity-product
+                    +img('product-serenity.png')
+                .block-text-bottom.block-serenity-text-bottom
+                    p.block-text-title Serenity. Courage. Wisdom.
+                    a(href='#').block-text-link Buy the serenity prayer >
+
+        .sign
+            form
+                h3.sign-title Sign Up & Be The First to Know:
+                input(type='text' placeholder='Email').sign-input
+                button.sign-submit SEND

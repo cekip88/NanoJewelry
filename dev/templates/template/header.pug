@@ -5,41 +5,43 @@ header.head
                 input(type='text' placeholder='Search...').head-search-input
                 button.head-search-button
                     +img('search.webp')
-            a(href='#').head-logo
-                +img('logo.png')
+            .head-nav-cont
+                .head-mobile-row
+                    a(href='#').head-logo
+                        +img('logo.png')
+                    button.head-burger
+                        span.head-burger-span
+                nav
+                    ul.head-nav
+                        li.head-nav-mobile
+                            .head-search
+                                input(type='text' placeholder='Search...').head-search-input
+                                button.head-search-button
+                                    +img('search.webp')
+                            a(href='#').head-nav-cart.head-cart
+                                span.head-cart-count 14
+                                +img('basket.png')
+                            a(href='#').head-nav-login Log in
+                            a(href='#').head-nav-sign Sign up
+                        li.head-nav-item
+                            a(href='#') Gifts
+                        li.head-nav-item
+                            a(href='#') Love
+                        li.head-nav-item
+                            a(href='#') Happiness
+                        li.head-nav-item
+                            a(href='#') For him
+                        li.head-nav-item
+                            a(href='#') For her
+                        li.head-nav-item
+                            a(href='#') Zodiac
+                        li.head-nav-item
+                            a(href='#') Religions
+                        li.head-nav-item
+                            a(href='#') Gift card
             .head-right.head-mobile-none
                 a(href='#').head-cart
                     span.head-cart-count 14
                     +img('basket.png')
                 a(href='#').head-login Log in
                 a(href='#').head-sign Sign up
-            button.head-burger
-                span.head-burger-span
-        nav.row
-            ul.head-nav
-                li.head-nav-mobile
-                    .head-search
-                        input(type='text' placeholder='Search...').head-search-input
-                        button.head-search-button
-                            +img('search.webp')
-                    a(href='#').head-nav-cart.head-cart
-                        span.head-cart-count 14
-                        +img('basket.png')
-                    a(href='#').head-nav-login Log in
-                    a(href='#').head-nav-sign Sign up
-                li.head-nav-item
-                    a(href='#') Gifts
-                li.head-nav-item
-                    a(href='#') Love
-                li.head-nav-item
-                    a(href='#') Happiness
-                li.head-nav-item
-                    a(href='#') For him
-                li.head-nav-item
-                    a(href='#') For her
-                li.head-nav-item
-                    a(href='#') Zodiac
-                li.head-nav-item
-                    a(href='#') Religions
-                li.head-nav-item
-                    a(href='#') Gift card
