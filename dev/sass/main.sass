@@ -2,7 +2,8 @@
 @import "../../../../core/mixins/mixins"
 @import "vars"
 $font_body: 14px
-+font_inc($f_reg,'roboto-regular.ttf')
++font_inc($f_reg,'myriadpro-regular.otf')
++font_inc($c_reg,'ACaslonPro-Regular.otf')
 .set
 	+wh(100%)
 html,body
@@ -11,6 +12,7 @@ html,body
 body
 	+wh(100%)
 	+font($font_body,$f_reg,$black)
+	color: $main
 
 input,button
 	font-family: inherit

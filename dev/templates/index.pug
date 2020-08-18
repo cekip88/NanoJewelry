@@ -1,7 +1,28 @@
 extends template/main
 append vars
   -
-    page_title= 'main page'
+    page_title= 'Main'
 block content
     main
-        .section
+        section
+            .block
+                .block-right.block-text
+                    h2.block-title
+                        | One jewelry is worth a thousand words
+                    p.block-text-big Artistic
+                        +img('24k.png')
+                        | Gold Nano Inscriptions
+                    ul.block-list
+                        li.block-list-item
+                            +img('ball.png')
+                            | Includes luxury magnifying glass to read the message
+                        li.block-list-item
+                            +img('ball.png')
+                            | 100-day return policy & money-back guarantee
+                        li.block-list-item
+                            +img('ball.png')
+                            | Free express delivery worldwide
+                .block-middle.block-thing
+                    +img('amulet.png')
+                .block-left.block-photo
+                    +img('girl.png')

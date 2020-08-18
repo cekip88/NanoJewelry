@@ -1,3 +1,68 @@
 $unit: 'px'
-.section
+section
   +w($tablet#{$unit})
+  padding: 0
+
+
+.head
+  &-mobile-none
+    display: flex!important
+  &-nav-mobile,&-burger
+    display: none
+  &-logo
+    margin: 0 auto
+    +w(150px)
+    img
+      +w(100%)
+  &-search
+    +w(215px)
+    &-input
+      text-align: left
+      padding: 5px 0 5px 30px
+    &-button
+      right: inherit
+      left: 0
+      border: none
+      padding: 8px
+  &-right
+    display: flex
+    align-items: center
+  &-cart
+    display: block
+  &-login
+    margin: 0 40px
+  &-nav
+    +wh(80%,auto)
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 0 auto
+    position: relative
+    &:after
+      +wh(100%,2px)
+      display: block
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      background-image: linear-gradient(90deg,rgba(#d2cdcc,.5),#6f5e59,rgba(#d2cdcc,.5))
+    &-item
+      border-bottom: none
+      a
+        +w(auto)
+        padding: 0 10px
+
+
+main
+  margin-top: 131px
+
+
+.footer
+  &-list
+    +w(100%)
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &-last-row
+    font-size: 14px

@@ -1,3 +1,47 @@
 $unit: 'px'
-.section
+
+body
+  font-size: 16px
+
+section
   +w($desktop#{$unit})
+
+.head
+  background-color: $white
+  padding: 30px 0
+  &,a,input,input::placeholder
+    color: $black
+  &-search
+    &-input
+      font-size: 14px
+      border: 2px solid $main
+      &::placeholder
+        opacity: .5
+    &-button
+      padding: 7px 8px 9px
+  &-cart
+    +wh(35px)
+    &-count
+      right: 8px
+      color: $brown
+  &-nav
+    +w(60%)
+    text-transform: uppercase
+    &-item
+      opacity: .7
+      font-size: 13px
+      letter-spacing: 1px
+  &-login,&-sign
+    letter-spacing: 2px
+
+main
+  margin-top: 171px
+
+
+.footer
+  padding: 30px 0
+  &-main
+    &-title
+      font-size: 36px
+  &-link
+    padding: 5px 0

@@ -1,29 +1,31 @@
 header.head
     section
         .row
-            .head-search
-                input(type='search' placeholder='Search...').head-search-input
+            .head-search.head-mobile-none
+                input(type='text' placeholder='Search...').head-search-input
                 button.head-search-button
                     +img('search.webp')
             a(href='#').head-logo
                 +img('logo.png')
-            .head-right
+            .head-right.head-mobile-none
                 a(href='#').head-cart
+                    span.head-cart-count 14
                     +img('basket.png')
                 a(href='#').head-login Log in
                 a(href='#').head-sign Sign up
+            button.head-burger
+                span.head-burger-span
         nav.row
             ul.head-nav
-                li.head-nav-item.head-nav-mobile
+                li.head-nav-mobile
                     .head-search
-                        input(type='search' placeholder='Search...').head-search-input
+                        input(type='text' placeholder='Search...').head-search-input
                         button.head-search-button
                             +img('search.webp')
-                li.head-nav-item.head-nav-mobile
-                    a(href='#').head-nav-cart
+                    a(href='#').head-nav-cart.head-cart
+                        span.head-cart-count 14
                         +img('basket.png')
                     a(href='#').head-nav-login Log in
-                    span /
                     a(href='#').head-nav-sign Sign up
                 li.head-nav-item
                     a(href='#') Gifts
