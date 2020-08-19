@@ -20,21 +20,4 @@ window.addEventListener('scroll',function (e) {
     headScrolled();
 });
 
-$('.real-list').slick({
-    infinite: true,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: false,
-    responsive: [
-        {
-            breakpoint: 0,
-            slidesToShow: 1
-        },{
-            breakpoint: 768,
-            slidesToShow: 2
-        },{
-            breakpoint: 1200,
-            slidesToShow: 3
-        }
-    ]
-});
+
