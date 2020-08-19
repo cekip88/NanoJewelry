@@ -98,18 +98,83 @@ h1,h2,h3,h4,h5,h6
       right: 6px
 
 main
-  margin-top: 77px
+  margin-top: 97px
+
+.string
+  text-align: center
+  font-size: 18px
+  margin-bottom: 20px
+  strong
+    font-weight: 700
+
+.partners
+  margin-bottom: 20px
+  padding: 0 10px
+  &-title
+    font-family: $c_reg
+    font-size: 24px
+  &-list
+    +w(100%)
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-item
+    width: 50px
+
+.real
+  +w(300px)
+  margin: 0 auto 20px
+  &-item
+    +w(100%)
+    display: flex
+    align-items: flex-start
+    &-title
+      margin-bottom: 10px
+      display: block
+      color: darkblue
+  &-left
+    +w(40%)
+    margin-right: auto
+  &-right
+    +w(55%)
+    text-align: center
+  &-stars
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 10px
+    &-icons
+      display: flex
+      align-items: center
+      svg
+        +wh(20px)
+      path
+        fill: #777
+      &-gold
+        path
+          fill: $gold
+  &-customer
+    margin-bottom: 10px
+    a
+      color: darkblue
+  &-comment
+    line-height: 20px
+
 
 .block
   position: relative
+  &-center
+    background-image: linear-gradient(90deg, #faf4f0,#e4c3ac,#faf4f0)
+    padding: 30px 10px
   &-to
     &-right,&-left
       padding: 0 10px
-      margin-bottom: 20px
     &-right
       background-image: linear-gradient(90deg, #faf4f0,#e4c3ac)
     &-left
       background-image: linear-gradient(270deg, #faf4f0,#e4c3ac)
+  &-to-right,&-to-left,&-center
+    margin-bottom: 20px
   &-title
     font-size: 24px
     color: $brown
@@ -118,6 +183,8 @@ main
     padding-top: 30px
     &-bottom
       padding: 10px
+    &-top
+      display: none
     &-title
       font-size: 18px
       margin-bottom: 7px
@@ -150,7 +217,25 @@ main
     margin: 0 auto
   &-photo
     display: none
+  &-gift
+    &-product
+      margin-top: 20px
 
+.story
+  position: relative
+  margin-bottom: 20px
+  &-link
+    position: absolute
+    bottom: 0
+    left: 0
+    a
+      color: $white
+
+.video
+  +w(100%)
+  margin-bottom: 20px
+  video
+    +w(100%)
 
 .sign
   background-image: linear-gradient(90deg,#14151a,#222632,#14151a)
@@ -174,6 +259,35 @@ main
   &-input
     +w(calc(100% - 60px))
     font-size: 12px
+
+.calm
+  margin-bottom: 20px
+  &-list,&-item
+    display: flex
+    flex-direction: column
+    align-items: center
+  &-title,&-item-title
+    color: $main
+  &-title
+    +w(100%)
+    text-align: center
+  &-item
+    margin-top: 20px
+    &-title
+      margin: 10px 0 0
+    &-text
+      margin-top: 10px
+    &-img
+      +wh(150px)
+      margin-bottom: 10px
+      background-image: linear-gradient(90deg, #14161f 50%, #313444 50%)
+      border-radius: 100%
+      +dfc
+      img
+        max-width: 80px
+        max-height: 80px
+    &:first-child
+      margin-top: 0
 
 .footer
   background-color: $black
