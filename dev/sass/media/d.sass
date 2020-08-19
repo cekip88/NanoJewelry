@@ -47,6 +47,7 @@ section
     letter-spacing: 1px
   &-scrolled
     padding: 10px 0
+    box-shadow: 0 5px 5px rgba($black,.3)
 
 
 main
@@ -64,10 +65,11 @@ main
     text-transform: uppercase
     padding-left: 50px
   &:before,&:after
-    +wh(calc(50% - 300px),1px)
+    +wh(calc(50% - 450px),1px)
     background-color: $main
     content: ''
     display: block
+    flex-shrink: 0
   &-list
     padding-right: 50px
 
@@ -110,15 +112,16 @@ main
     &-text-bottom
       padding-right: 70px
   &-mom
+    &-product
+      max-width: 300px
     &-text
       &-bottom
-        +w(25%)
-        max-width: 400px
+        +w(330px)
   &-serenity
     &-photo
       +w(40%)
     &-product
-      margin-right: 15%
+      margin-right: 15%!important
     &-text-bottom
       +w(calc(50% + 204px))
   &-zodiac
@@ -131,7 +134,7 @@ main
   &-happiness
     &-product
       +w(18%)
-      margin-right: 15%
+      margin-right: 15%!important
     &-photo
       +w(36%)
     &-text
