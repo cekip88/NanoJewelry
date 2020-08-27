@@ -238,6 +238,47 @@ main
   &-item
     margin-top: 0
 
+.real
+  width: 100%
+  margin-bottom: 40px
+  &-list
+    width: 80%
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    overflow: hidden
+  &-item
+    flex: 0 0 30%
+  &-stars
+    &>span
+      margin-left: 5px
+      margin-bottom: 3px
+  &-slider
+    position: relative
+  &-buttons
+    +wh(calc(100% - 60px),100%)
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 0 auto
+    button
+      padding: 10px
+    &-right
+      span
+        transform: rotate(45deg)
+    &-left
+      span
+        transform: rotate(-135deg)
+    span
+      +wh(15px)
+      display: block
+      border-top: 4px solid $black
+      border-right: 4px solid $black
+
 .footer
   &-list
     +w(100%)
