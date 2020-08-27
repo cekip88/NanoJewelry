@@ -13,8 +13,9 @@ section
 .head
   background-color: $white
   padding: 30px 0 40px
+
   &,a,input,input::placeholder
-    color: $black
+    color: $brown
   &-right
     flex: 0 0 200px
   &-search
@@ -54,13 +55,13 @@ main
   margin-top: 184px
 
 .string
-  margin-bottom: 120px
+  margin-bottom: 60px
   font-size: 24px
 
 .partners
   +w(100%)
   padding: 0
-  margin-bottom: 120px
+  margin-bottom: 80px
   &-title
     text-transform: uppercase
     padding-left: 50px
@@ -77,9 +78,9 @@ main
 
 .block
   &-to-right,&-to-left,&-center
-    margin-bottom: 120px
+    margin-bottom: 80px
   &-title
-    font-size: 40px
+    font-size: 32px
     font-weight: 700
     padding-bottom: 30px
   &-text
@@ -117,6 +118,8 @@ main
     &-text
       &-bottom
         +w(330px)
+    &-photo
+      +w(70%)
   &-serenity
     &-photo
       +w(40%)
@@ -128,13 +131,12 @@ main
     &-product
       +w(23%)
     &-photo
-      +w(45%)
+      +w(43%)
     &-text-bottom
       +w(55%)
   &-happiness
     &-product
-      +w(18%)
-      margin-right: 15%!important
+      +w(19%)
     &-photo
       +w(36%)
     &-text
@@ -146,9 +148,9 @@ main
           font-size: 32px
   &-compliment
     &-product
-      +w(30%)
+      +w(35%)
     &-photo
-      +w(45%)
+      +w(50%)
     &-text-bottom
       top: 100px
   &-gift
@@ -158,10 +160,18 @@ main
     padding: 50px 0
     .block
       justify-content: center
+  &-first
+    margin-bottom: 40px
 
 a.block-text-title
   &:hover
     text-decoration: underline
+
+.gift-card
+  padding: 70px 0
+  .block-text-title
+    font-size: 29px
+    margin-bottom: 20px
 
 .story
   margin-bottom: 120px
@@ -178,6 +188,7 @@ a.block-text-title
     +w(1000px)
     margin: 0 auto
   &-title
+    font-size: 28px
     margin-right: 50px
   &-input
     width: 400px
@@ -226,7 +237,10 @@ a.block-text-title
       font-size: 36px
   &-link
     padding: 5px 0
-    font-size: 20px
+    font-size: 17px
+  &-copy
+    font-size: 17px
+    margin-bottom: 15px
 a.footer-link
   &:hover
     text-decoration: underline
